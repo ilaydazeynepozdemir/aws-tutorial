@@ -3,8 +3,9 @@ import os
 
 ACCESS_KEY_ID = os.environ['ACCESS_KEY']
 SECRECT_ACCESS_KEY = os.environ['SECRET_ACCESS_KEY']
+REGION = os.environ['REGION']
 textract = boto3.client("textract", aws_access_key_id=ACCESS_KEY_ID, aws_secret_access_key=SECRECT_ACCESS_KEY,
-                        region_name="eu-west-2")
+                        region_name=REGION)
 
 DOCUMENT_PATH = "/home/ilayda/Downloads/"
 documentName = DOCUMENT_PATH + "test.png"
